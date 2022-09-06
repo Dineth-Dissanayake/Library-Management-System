@@ -2,7 +2,7 @@ import { Routes as Switch, Route } from "react-router-dom";
 
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
+import Login from "./pages/Login/Login";
 
 const App = () => {
   return (
