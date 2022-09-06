@@ -13,6 +13,10 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json({ limit: "20mb" }));
 
+//IMPORT ROUTES
+const bookRoutes = require("./api/routes/book.r");
+app.use(bookRoutes);
+
 app.get("/", (req, res, next) => {
     res.send("<h2>📚 Library Management System</h2>");
     next();
