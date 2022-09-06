@@ -7,6 +7,10 @@ const librarianSchema = new Schema({
     type: String,
     required: [true, "Required⚠️"],
   },
+  email: {
+    type: String,
+    required: [true, "email Required⚠️"],
+  },
   password: {
     type: String,
     required: [true, "Required⚠️"],

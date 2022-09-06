@@ -17,10 +17,7 @@ app.use(express.json({ limit: "20mb" }));
 const bookRoutes = require("./api/routes/book.r");
 app.use(bookRoutes);
 
-app.get("/", (req, res, next) => {
-    res.send("<h2>📚 Library Management System</h2>");
-    next();
-});
+app.use("/api", require("./api/routes/librarian.auth.r"));
 
 app.listen(PORT, () => {
     console.log('🚀 SERVER IS UP & RUNNING ON:', PORT);
