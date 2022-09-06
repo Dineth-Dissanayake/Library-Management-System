@@ -7,7 +7,7 @@ const auth = require("../middleware/pw.auth");
 const User = require("../models/librarian.m");
 
 
-router.post("librarian/register", async (req, res) => {
+router.post("/register", async (req, res) => {
   const { username, email, password } = req.body;
 
   // check all the missing fields.
