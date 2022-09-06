@@ -13,10 +13,11 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json({ limit: "20mb" }));
 
-app.get("/", (req, res, next) => {
-    res.send("<h2>📚 Library Management System</h2>");
-    next();
-});
+//IMPORT ROUTES
+const bookRoutes = require("./api/routes/book.r");
+app.use(bookRoutes);
+
+app.use("/api", require("./api/routes/librarian.auth.r"));
 
 app.listen(PORT, () => {
     console.log('🚀 SERVER IS UP & RUNNING ON:', PORT);
