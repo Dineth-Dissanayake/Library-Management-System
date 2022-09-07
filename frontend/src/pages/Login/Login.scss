@@ -1,12 +1,12 @@
-$main-color:#8bc7ff;
+$main-color:#6ab6fd;
 
 .main-login{
 min-height: 90vh;
 min-width: 90vw;
 overflow-x: hidden;
 background: linear-gradient(to right,  rgb(223, 221, 221) 50%, $main-color 50%);
-.login-contain{
 
+.login-contain{
         height: 75vh;
         width: 70%;
         background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7),rgba(236,236,236,0.4));

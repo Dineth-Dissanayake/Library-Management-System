@@ -1,17 +1,23 @@
 import { Routes as Switch, Route } from "react-router-dom";
 
 import Layout from "./components/Layout";
+import { AuthContextProvider } from "./context/AuthContext";
+import { ToastContextProvider } from "./context/ToastContext";
 import Home from "./pages/Home";
 import Login from "./pages/Login/Login";
 
 const App = () => {
   return (
-    <Layout>
-      <Switch>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-      </Switch>
-    </Layout>
+    <ToastContextProvider>
+      <AuthContextProvider>
+        <Layout>
+          <Switch>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+          </Switch>
+        </Layout>
+      </AuthContextProvider>
+    </ToastContextProvider>
   );
 };
 
