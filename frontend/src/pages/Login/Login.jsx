@@ -1,9 +1,39 @@
 import './Login.scss';
-// import { Link } from 'react-router-dom';
+import { useState, useContext } from 'react';
+
 import logo from './logo.png';
 import welcomeBack from './welcomeback.svg';
 
+import AuthContext from '../../context/AuthContext';
+import ToastContext from '../../context/ToastContext';
+
 const Login = () => {
+
+    const {toast} = useContext(ToastContext);
+    const {loginUser} = useContext(AuthContext);
+
+    const [credentials, setCredentials] = useState({
+        username: "",
+        password: ""
+    });
+
+    const handleInputChange = (event) => {
+        const {name, value} = event.target;
+
+        setCredentials({...credentials, [name]: value});
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        if(!credentials.username || !credentials.password) {
+            toast.error("Please enter all required fields!");
+            return;
+        }
+
+        loginUser(credentials);
+    };
+
     return (
         <div className='main-login'>
             <div className="login-contain">
@@ -13,22 +43,28 @@ const Login = () => {
                         <img src={logo} id="img-id" alt="" />
                     </div>
                  
-                    <form >
-                        <label htmlFor="emil1">Username:</label>
-                            <input placeholder="Enter your email..." 
-                                type="email" 
-                                // value={emailval} 
-                                // onChange={(e)=>{(e.target.value)}} 
-                                id="emil1"
+                    <form onSubmit={handleSubmit}>
+                        <label htmlFor="usernameInput">Username:</label>
+                            <input 
+                                placeholder="Enter username" 
+                                type="text" 
+                                name='username'
+                                value={credentials.username} 
+                                onChange={handleInputChange} 
+                                id="usernameInput"
+                                required
                             />
 
-                        <label htmlFor="pwd1">Password:</label>
-                            <input placeholder="Enter password" 
+                        <label htmlFor="passwordInput">Password:</label>
+                            <input 
+                                placeholder="Enter password" 
                                 type="password" 
                                 autoComplete="false"
-                                // value={passval} 
-                                // onChange={(e)=>{(e.target.value)}}
-                                id="pwd1"
+                                name='password'
+                                value={credentials.password} 
+                                onChange={handleInputChange}
+                                id="passwordInput"
+                                required
                             />
 
                         <button type="submit" id="sub_butt">Login</button>
