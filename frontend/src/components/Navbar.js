@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link, useNavigate  } from "react-router-dom";
-import { Avatar } from '@mui/material';
+// import { Avatar } from '@mui/material';
 
 import AuthContext from "../context/AuthContext";
 import ToastContext from "../context/ToastContext";
@@ -40,8 +40,11 @@ const Navbar = ({title="LIBRARY MANAGEMENT SYSTEM"}) => {
                                         navigate("/login", { replace: true });
                                     }}
                                 >
-                                    <a className="nav-link">{user.username}</a>
-                                    <Avatar src="/broken-image.jpg" />
+                                    <a className="nav-link">{user.username}-LOGOUT</a>
+                                    {/* <Avatar 
+                                        src="/broken-image.jpg"
+                                        sx={{ width: 30, height: 30 }} 
+                                    /> */}
                                 </li>
                             </>
                         ) : (

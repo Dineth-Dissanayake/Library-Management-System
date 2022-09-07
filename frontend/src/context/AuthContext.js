@@ -29,7 +29,7 @@ export const AuthContextProvider = ({ children }) => {
       const result = await res.json();
       if (!result.error) {
         setUser(result);
-        navigate("/", {replace: true});
+        navigate("/dashboard", {replace: true});
       }
     } catch (err) {
       console.log(err);
@@ -53,7 +53,7 @@ export const AuthContextProvider = ({ children }) => {
         localStorage.setItem("token", result.token);
         setUser(result.user);
         toast.success(`Logged in ${result.user.username}`);
-        navigate("/", { replace: true });
+        navigate("/dashboard", { replace: true });
         
       } else {
         toast.error(result.error);
