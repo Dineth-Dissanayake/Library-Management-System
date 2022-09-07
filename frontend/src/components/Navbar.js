@@ -40,6 +40,7 @@ const Navbar = ({title="LIBRARY MANAGEMENT SYSTEM"}) => {
                                         navigate("/login", { replace: true });
                                     }}
                                 >
+                                    <a className="nav-link">{user.username}</a>
                                     <Avatar src="/broken-image.jpg" />
                                 </li>
                             </>
