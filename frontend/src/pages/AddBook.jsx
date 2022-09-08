@@ -1,71 +1,58 @@
-import React, { Component } from 'react';
+import { useState, useContext } from 'react';
+
+import AuthContext from '../context/AuthContext';
+import ToastContext from '../context/ToastContext';
 import Sidebar from '../components/sidebar/Sidebar';
 import "./Main.css";
-import axios from "axios";
-// import ToastContext from '../context/ToastContext';
 
-class AddBook extends Component {
-    
+const AddBook = () => {
 
-    
+    const {toast} = useContext(ToastContext);
+    const {addBook} = useContext(AuthContext);
 
-    constructor(props){
-        super(props);
-        this.state={
+    const [credentials, setCredentials] = useState({
+        bookId: "",
+        title:"",
+        autherName:"",
+        bCategory:"",
+        count:"",
+        description:""
+    });
+
+    const handleInputChange = (event) => {
+        const {name, value} = event.target;
+
+        setCredentials({...credentials, [name]: value});
+    };
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+        
+        if(
+            !credentials.bookId ||
+            !credentials.title ||
+            !credentials.autherName ||
+            !credentials.bCategory ||
+            !credentials.count ||
+            !credentials.description
+            ) {
+            toast.error("Please enter all required fields!");
+            return;
+        }
+        addBook(credentials);
+
+        setCredentials({
             bookId: "",
             title:"",
             autherName:"",
             bCategory:"",
             count:"",
             description:""
-        }
-    }
+        });
+    };
 
-    handleInputChange = (e) => {
-        const {name,value} = e.target;
-
-        this.setState({
-            ...this.state,
-            [name]:value
-        })
-    }
-
-    onSubmit = (e) => {
-        e.preventDefault();
-
-        const {bookId, title, autherName, bCategory, count, description} = this.state;
-        const data = {
-            bookId: bookId,
-            title: title,
-            autherName: autherName,
-            bCategory: bCategory,
-            count: count,
-            description: description
-        }
-        console.log(data);
-
-        axios.post("http://localhost:8080//book/add",data).then((res) => {
-            if(res.data.success){
-                alert("New Added Successfully!")
-                // toast.success(`Book Added Successfully`);
-                this.setState(
-                    {
-                        bookId: "",
-                        title:"",
-                        autherName:"",
-                        bCategory:"",
-                        count:"",
-                        description:""
-                    }
-                )
-            }
-        })
-    }
-
-
-    render() {
-        return (
-            <>
+    return (
+        <>
                 <Sidebar />
                 <div className='container'>
                     <h3>ADD BOOK TO THE SYSTEM</h3>
@@ -78,8 +65,8 @@ class AddBook extends Component {
                                 className="form-control" 
                                 placeholder="Default input" 
                                 name='bookId'
-                                value={this.state.bookId}
-                                onChange={this.handleInputChange}
+                                value={credentials.bookId}
+                                onChange={handleInputChange}
                             />
                         </div>
 
@@ -90,8 +77,8 @@ class AddBook extends Component {
                                 className="form-control" 
                                 placeholder="Default input" 
                                 name='title'
-                                value={this.state.title}
-                                onChange={this.handleInputChange}
+                                value={credentials.title}
+                                onChange={handleInputChange}
                             />
                         </div>
 
@@ -102,8 +89,8 @@ class AddBook extends Component {
                                 className="form-control" 
                                 placeholder="Default input" 
                                 name='autherName' 
-                                value={this.state.autherName}
-                                onChange={this.handleInputChange}
+                                value={credentials.autherName}
+                                onChange={handleInputChange}
                             />
                         </div>
 
@@ -112,8 +99,8 @@ class AddBook extends Component {
                             <select 
                                 name="bCategory" 
                                 className="form-select"
-                                value={this.state.bCategory}
-                                onChange={this.handleInputChange} 
+                                value={credentials.bCategory}
+                                onChange={handleInputChange} 
                             >
                                 <option>Choose...</option>
                                 <option>Engineering</option>
@@ -129,8 +116,8 @@ class AddBook extends Component {
                                 className="form-control" 
                                 placeholder="Default input" 
                                 name='count' 
-                                value={this.state.count}
-                                onChange={this.handleInputChange}
+                                value={credentials.count}
+                                onChange={handleInputChange}
                             />
                         </div>
 
@@ -141,19 +128,18 @@ class AddBook extends Component {
                                 name='description'
                                 rows="3" 
                                 spellCheck="false"
-                                value={this.state.description}
-                                onChange={this.handleInputChange}
+                                value={credentials.description}
+                                onChange={handleInputChange}
                             >
                             </textarea>
                         </div>
 
-                        <button type="button" className="btn btn-info mt-4" onClick={this.onSubmit}>ADD BOOK</button>
+                        <button type="button" className="btn btn-info mt-4" onClick={onSubmit}>ADD BOOK</button>
 
                     </form>
                 </div>
-            </>
-        );
-    }
-}
+        </>
+    );
+};
 
 export default AddBook;
