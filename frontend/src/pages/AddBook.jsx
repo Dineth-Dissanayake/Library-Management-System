@@ -44,7 +44,7 @@ class AddBook extends Component {
         }
         console.log(data);
 
-        axios.post("http://localhost:8080//book/add",data).then((res) => {
+        axios.post("http://localhost:8080/book/add",data).then((res) => {
             if(res.data.success){
                 alert("New Added Successfully!")
                 // toast.success(`Book Added Successfully`);
