@@ -9,6 +9,7 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import AssignmentReturnedIcon from '@mui/icons-material/AssignmentReturned';
 import StyleIcon from '@mui/icons-material/Style';
+import DensitySmallIcon from '@mui/icons-material/DensitySmall';
 
 export const SidebarData = [
     {
@@ -19,22 +20,22 @@ export const SidebarData = [
     {
         title: "ALL WAITING STUDENTS",
         icon: <HourglassBottomIcon />,
-        link: "/waiting_students"
+        link: "/#"
     },
     {
         title: "ALL APPROVED STUDENTS",
         icon: <CheckBoxIcon />,
-        link: "/approve_students"
+        link: "/#"
     },
     {
         title: "REGISTRATION SETTINGS",
         icon: <HowToRegIcon />,
-        link: "/reg_setting"
+        link: "/#"
     },
     {
         title: "ALL BOOKS IN LIBRARY",
         icon: <LocalLibraryIcon />,
-        link: "/books"
+        link: "/#"
     },
     {
         title: "ADD NEW BOOK",
@@ -44,16 +45,21 @@ export const SidebarData = [
     {
         title: "ADD BOOK CATEGORY",
         icon: <ImportContactsIcon />,
-        link: "/add_book_category"
+        link: "/#"
+    },
+    {
+        title: "ALL BOOK CATEGORIES",
+        icon: <DensitySmallIcon />,
+        link: "/#"
     },
     {
         title: "ISSUE OR RETURN BOOK",
         icon: <AssignmentReturnedIcon />,
-        link: "/issue_return"
+        link: "/#"
     },
     {
         title: "ALL ISSUED BOOKS",
         icon: <StyleIcon />,
-        link: "/issued"
+        link: "/#"
     }
 ] 
