@@ -19,6 +19,9 @@ app.use(express.json({ limit: "20mb" }));
 const bookRoutes = require("./api/routes/book.r");
 app.use(bookRoutes);
 
+const categoryRoutes = require("./api/routes/category.r");
+app.use(categoryRoutes);
+
 app.use("/api/", require("./api/routes/librarian.auth.r"));
 
 app.listen(PORT, () => {
