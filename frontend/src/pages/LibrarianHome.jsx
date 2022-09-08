@@ -6,7 +6,9 @@ class LibrarianHome extends Component {
         return (
             <>
                 <Sidebar />
-                <h4>This Librarian Home page</h4>
+                <div className='container'>
+                    <h4>This Librarian Home page</h4>
+                </div>
             </>
         );
     }

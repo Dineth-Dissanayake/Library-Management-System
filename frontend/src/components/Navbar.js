@@ -32,7 +32,7 @@ const Navbar = ({title="LIBRARY MANAGEMENT SYSTEM"}) => {
                         {user ? (
                             <>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/#">{user.username}</a>
+                                    <a className="nav-link" href="/dashboard">{user.username}</a>
                                 </li>
 
                                 <li className="nav-item">

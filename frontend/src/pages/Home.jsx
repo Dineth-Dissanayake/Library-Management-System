@@ -11,7 +11,7 @@ const Home = () => {
 
             <br/>
 
-            <h4 id="t2">WELCOME TO OUR LIBRARY</h4>
+            <h3 id="t2">We stand behind your success</h3>
 
             <br/>
 
