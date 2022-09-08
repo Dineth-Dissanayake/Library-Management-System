@@ -7,6 +7,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Login from "./pages/Login/Login";
 import LibrarianHome from "./pages/LibrarianHome";
+import AddBook from "./pages/AddBook";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<LibrarianHome />} />
+            <Route path="/add_book" element={<AddBook />} />
           </Switch>
         </Layout>
       </AuthContextProvider>

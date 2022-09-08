@@ -5,6 +5,7 @@ import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import AssignmentReturnedIcon from '@mui/icons-material/AssignmentReturned';
 import StyleIcon from '@mui/icons-material/Style';
@@ -36,9 +37,14 @@ export const SidebarData = [
         link: "/books"
     },
     {
+        title: "ADD NEW BOOK",
+        icon: <LibraryBooksIcon />,
+        link: "/add_book"
+    },
+    {
         title: "ADD BOOK CATEGORY",
         icon: <ImportContactsIcon />,
-        link: "/add_book"
+        link: "/add_book_category"
     },
     {
         title: "ISSUE OR RETURN BOOK",
