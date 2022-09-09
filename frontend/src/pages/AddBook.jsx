@@ -63,7 +63,7 @@ const AddBook = () => {
                             <input 
                                 type="text" 
                                 className="form-control" 
-                                placeholder="Default input" 
+                                placeholder="Bxxx" 
                                 name='bookId'
                                 value={credentials.bookId}
                                 onChange={handleInputChange}
@@ -75,7 +75,7 @@ const AddBook = () => {
                             <input 
                                 type="text" 
                                 className="form-control" 
-                                placeholder="Default input" 
+                                placeholder="Book Title" 
                                 name='title'
                                 value={credentials.title}
                                 onChange={handleInputChange}
@@ -87,7 +87,7 @@ const AddBook = () => {
                             <input 
                                 type="text" 
                                 className="form-control" 
-                                placeholder="Default input" 
+                                placeholder="Author Name" 
                                 name='autherName' 
                                 value={credentials.autherName}
                                 onChange={handleInputChange}
@@ -114,7 +114,7 @@ const AddBook = () => {
                             <input 
                                 type="text" 
                                 className="form-control" 
-                                placeholder="Default input" 
+                                placeholder="XX" 
                                 name='count' 
                                 value={credentials.count}
                                 onChange={handleInputChange}
@@ -122,9 +122,10 @@ const AddBook = () => {
                         </div>
 
                         <div className="col-md-6 mt-1">
-                            <label htmlFor="exampleTextarea" className="form-label mt-4">Example textarea</label>
+                            <label htmlFor="exampleTextarea" className="form-label mt-4">Description</label>
                             <textarea 
-                                className="form-control" 
+                                className="form-control"
+                                placeholder="Enter Book Description"  
                                 name='description'
                                 rows="3" 
                                 spellCheck="false"
