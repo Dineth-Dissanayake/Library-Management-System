@@ -10,6 +10,7 @@ import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import AssignmentReturnedIcon from '@mui/icons-material/AssignmentReturned';
 import StyleIcon from '@mui/icons-material/Style';
 import DensitySmallIcon from '@mui/icons-material/DensitySmall';
+import AddIcon from '@mui/icons-material/Add';
 
 export const SidebarData = [
     {
@@ -25,6 +26,11 @@ export const SidebarData = [
     {
         title: "ALL APPROVED STUDENTS",
         icon: <CheckBoxIcon />,
+        link: "/#"
+    },
+    {
+        title: "ADD NEW STUDENTS",
+        icon: <AddIcon />,
         link: "/#"
     },
     {
