@@ -20,6 +20,7 @@ const AddBook = () => {
     });
 
     const handleInputChange = (event) => {
+        const {name, value} = event.target;
 
         setCredentials({...credentials, [name]: value});
     };
