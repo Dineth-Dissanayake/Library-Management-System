@@ -51,7 +51,7 @@ export const SidebarData = [
     {
         title: "ADD BOOK CATEGORY",
         icon: <ImportContactsIcon />,
-        link: "/#"
+        link: "/add_category"
     },
     {
         title: "ALL BOOK CATEGORIES",
