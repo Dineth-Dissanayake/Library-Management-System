@@ -53,9 +53,14 @@ export const SidebarData = [
         link: "/#"
     },
     {
-        title: "ISSUE OR RETURN BOOK",
+        title: "ISSUE BOOK",
         icon: <AssignmentReturnedIcon />,
-        link: "/#"
+        link: "/issuebook"
+    },
+    {
+        title: "RETURN BOOK",
+        icon: <AssignmentReturnedIcon />,
+        link: "/returnbook"
     },
     {
         title: "ALL ISSUED BOOKS",
