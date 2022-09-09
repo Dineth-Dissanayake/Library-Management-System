@@ -9,6 +9,8 @@ import Login from "./pages/Login/Login";
 import LibrarianHome from "./pages/LibrarianHome";
 import AddBook from "./pages/AddBook";
 import AddCategory from "./pages/AddCategory";
+import IssueBook from "./pages/Issuebook";
+import ReturnBook from "./pages/Returnbook"
 
 const App = () => {
   return (
@@ -21,6 +23,9 @@ const App = () => {
             <Route path="/dashboard" element={<LibrarianHome />} />
             <Route path="/add_book" element={<AddBook />} />
             <Route path="/add_category" element={<AddCategory />} />
+            <Route path="/issuebook" element={<IssueBook />} />
+            <Route path="/returnbook" element={<ReturnBook />} />
+            
           </Switch>
         </Layout>
       </AuthContextProvider>

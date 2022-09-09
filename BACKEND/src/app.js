@@ -22,6 +22,13 @@ app.use(bookRoutes);
 const categoryRoutes = require("./api/routes/category.r");
 app.use(categoryRoutes);
 
+const issuebookRoutes = require("./api/routes/issuebook.r");
+app.use(issuebookRoutes);
+
+const returnbookRoutes = require("./api/routes/returnbook.r");
+app.use(returnbookRoutes);
+
+
 app.use("/api/", require("./api/routes/librarian.auth.r"));
 
 app.listen(PORT, () => {
