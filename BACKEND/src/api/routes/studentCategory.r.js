@@ -1,6 +1,6 @@
 import express from "express";
 
-const StudentCategory = require("../models/book.m");
+const StudentCategory = require("../models/studentCategory.m");
 const router = express.Router();
 
 //Add new student category
@@ -29,8 +29,39 @@ router.get('/studentCategories', (req,res) => {
         }
         return res.status(200).json({
             success:true,
-            existingStudentCategory:StudentCategory
+            existingStudentCategory: StudentCategory
         });
     });
 });
 
+//Edit school branch
+router.put('/studentCategory/edit/:id', (req,res) => {
+    StudentCategory.findByIdAndUpdate(
+        req.params.id,
+        {
+            $set:req.body
+        },
+        (err,StudentCategory) => {
+            if(err){
+                return res.status(400).json({error:err});
+            }
+            return res.status(200).json({
+                success: "Updated successfully!"
+            });
+        }
+    );
+});
+
+//Delete post
+router.delete('/studentCategory/delete/:id', (req,res) => {
+    StudentCategory.findByIdAndRemove(req.params.id).exec((err,deletedStudentCategory) => {
+        if(err) return res.status(400).json({
+            message: "Delete unsuccessful!",err
+        });
+        return res.json({
+            message: "Deleted successfully!", deletedStudentCategory
+        });
+    });
+});
+
+module.exports = router;

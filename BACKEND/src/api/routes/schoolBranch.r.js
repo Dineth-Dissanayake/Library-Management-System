@@ -33,3 +33,35 @@ router.get('/schoolBranches', (req,res) => {
         });
     });
 });
+
+//Edit school branch 
+router.put('/schoolBranch/edit/:id', (req,res) => {
+    SchoolBranch.findByIdAndUpdate(
+        req.params.id,
+        {
+            $set:req.body
+        },
+        (err,SchoolBranch) => {
+            if(err){
+                return res.status(400).json({error:err});
+            }
+            return res.status(200).json({
+                success: "Updated successfully!"
+            });
+        }
+    );
+});
+
+//Delete school branch
+router.delete('/schoolBranch/delete/:id', (req,res) => {
+    SchoolBranch.findByIdAndRemove(req.params.id).exec((err,deletedSchoolBranch) => {
+        if(err) return res.status(400).json({
+            message: "Delete unsuccessful",err
+        });
+        return res.json({
+            message: "Deleted successfully!", deletedSchoolBranch
+        });
+    });
+});
+
+module.exports = router;

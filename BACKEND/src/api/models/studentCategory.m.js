@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const studentCategorySchema = new Schema({
-    studentCategory: {
+    categoryName: {
         type: String,
         required: [true, "Student category required⚠️"],
     },
