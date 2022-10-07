@@ -76,7 +76,7 @@ export const SidebarData = [
     {
         title: "SCHOOL BRANCHES",
         icon: <HolidayVillageIcon />,
-        link: "/school_branches"
+        link: "/view_school_branches"
     },
     {
         title: "STUDENT CATEGORIES",

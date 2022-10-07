@@ -64,4 +64,19 @@ router.delete('/schoolBranch/delete/:id', (req,res) => {
     });
 });
 
+//Get a specific branch
+router.get('/schoolBranch/:id', (req,res) => {
+    let schoolBranchId = req.params.id;
+
+    SchoolBranch.findById(schoolBranchId,(err,SchoolBranch) => {
+        if(err){
+            return res.status(400).json({success:false, err});
+        }
+        return res.status(200).json({
+            success:true,
+            SchoolBranch
+        });
+    });
+});
+
 module.exports = router;

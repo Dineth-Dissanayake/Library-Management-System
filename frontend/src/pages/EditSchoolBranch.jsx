@@ -1,14 +1,13 @@
+import axios from 'axios';
 import React, { Component } from 'react';
 import Sidebar from '../components/sidebar/Sidebar';
 import "./Main.css";
-import axios from "axios";
 
-class AddSchoolBranch extends Component {
-
+export default class EditSchoolBranch extends Component {
     constructor(props){
         super(props);
         this.state={
-            branchName: "",
+            branchName: ""
         }
     }
 
@@ -23,23 +22,36 @@ class AddSchoolBranch extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-
+        const id = this.props.match.params.id;
         const {branchName} = this.state;
         const data = {
             branchName : branchName,
         }
         console.log(data);
 
-        axios.post("http://localhost:8080/schoolBranch/add",data).then((res) => {
+        axios.put(`http://localhost:8080/schoolBranch/edit/${id}`,data).then((res) => {
             if(res.data.success){
-                alert("New school branch added successfully!")
+                alert("Branch updated successfully!")
                 this.setState(
                     {
                         branchName: ""
                     }
-                )
+                );
             }
-        })
+        });
+    }
+
+    componentDidMount(){
+        const id = this.props.match.params.id;
+        
+        axios.get(`http://localhost:8080/schoolBranch/${id}`).then((res) => {
+            if(res.data.success){
+                this.setState({
+                    branchName:res.data.SchoolBranch.branchName
+                });
+                console.log(this.state.SchoolBranch);
+            }
+        });
     }
 
     render() {
@@ -47,14 +59,14 @@ class AddSchoolBranch extends Component {
             <>
                 <Sidebar />
                 <div className='container'>
-                    <h3>ADD SCHOOL BRANCH</h3>
+                    <h3>UPDATE SCHOOL BRANCH</h3>
 
                     <form>
                         <div className="col-md-6 mt-3">
-                            <label class="col-form-label" for="inputDefault">Name of the school branch</label>
+                            <label className="col-form-label" for="inputDefault">Name of the school branch</label>
                             <input 
                                 type="text" 
-                                class="form-control" 
+                                className="form-control" 
                                 placeholder="Branch name" 
                                 name="branchName"
                                 value={this.state.branchName}
@@ -62,7 +74,7 @@ class AddSchoolBranch extends Component {
                             />
                         </div>
 
-                        <button type="button" class="btn btn-info mt-4"onClick={this.onSubmit}>ADD NEW BRANCH</button>
+                        <button type="button" className="btn btn-info mt-4"onClick={this.onSubmit}>UPDATE BRANCH</button>
 
                     </form>
                 </div>
@@ -70,5 +82,3 @@ class AddSchoolBranch extends Component {
         );
     }
 }
-
-export default AddSchoolBranch;

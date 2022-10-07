@@ -1,6 +1,11 @@
 .container {
-    margin-top: -650px;
+    margin-top: -700px;
     margin-left: 300px;
 
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container-2 {
+    margin-bottom: 50px;
+    margin-top: 20px;
 }
