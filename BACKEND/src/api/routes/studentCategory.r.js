@@ -64,4 +64,19 @@ router.delete('/studentCategory/delete/:id', (req,res) => {
     });
 });
 
+//Get specific student category
+router.get('/studentCategory/:id', (req,res) => {
+    let studentCategoryId = req.params.id;
+
+    StudentCategory.findById(studentCategoryId,(err,StudentCategory) => {
+        if(err){
+            return res.status(400).json({success:false, err});
+        }
+        return res.status(200).json({
+            success:true,
+            StudentCategory
+        });
+    });
+});
+
 module.exports = router;

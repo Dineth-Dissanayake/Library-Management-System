@@ -47,7 +47,7 @@ export default class ViewSchoolBranches extends Component {
                     </thead>
                     <tbody>
                         {this.state.schoolBranches.map((schoolBranches,index) =>(
-                            <tr>
+                            <tr key = {index}>
                                 <th scope="row">{index+1}</th>
                                 <td>{schoolBranches.branchName}</td>
                                 <td>

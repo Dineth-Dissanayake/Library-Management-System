@@ -22,10 +22,10 @@ export default class EditSchoolBranch extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        const id = this.props.match.params.id;
+        let id = this.params.id;
         const {branchName} = this.state;
         const data = {
-            branchName : branchName,
+            branchName : branchName
         }
         console.log(data);
 
@@ -42,8 +42,8 @@ export default class EditSchoolBranch extends Component {
     }
 
     componentDidMount(){
-        const id = this.props.match.params.id;
-        
+        let id = this.params.id;
+        console.log(id);
         axios.get(`http://localhost:8080/schoolBranch/${id}`).then((res) => {
             if(res.data.success){
                 this.setState({
@@ -63,7 +63,7 @@ export default class EditSchoolBranch extends Component {
 
                     <form>
                         <div className="col-md-6 mt-3">
-                            <label className="col-form-label" for="inputDefault">Name of the school branch</label>
+                            <label className="col-form-label" htmlFor="inputDefault">Name of the school branch</label>
                             <input 
                                 type="text" 
                                 className="form-control" 

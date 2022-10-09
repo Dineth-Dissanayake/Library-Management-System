@@ -81,6 +81,6 @@ export const SidebarData = [
     {
         title: "STUDENT CATEGORIES",
         icon: <Group />,
-        link: "/student_categories"
+        link: "/view_student_categories"
     },
 ] 

@@ -51,7 +51,7 @@ class AddSchoolBranch extends Component {
 
                     <form>
                         <div className="col-md-6 mt-3">
-                            <label class="col-form-label" for="inputDefault">Name of the school branch</label>
+                            <label class="col-form-label" htmlFor="inputDefault">Name of the school branch</label>
                             <input 
                                 type="text" 
                                 class="form-control" 

@@ -13,7 +13,7 @@ import AddSchoolBranch from "./pages/AddSchoolBranch";
 import AddStudentCategory from "./pages/AddStudentCategory";
 import ViewSchoolBranches from "./pages/ViewSchoolBranches";
 import EditSchoolBranch from "./pages/EditSchoolBranch";
-
+import ViewStudentCategories from "./pages/ViewStudentCategories";
 const App = () => {
   return (
     <ToastContextProvider>
@@ -29,6 +29,7 @@ const App = () => {
             <Route path="/add_student_category" element={<AddStudentCategory />} />
             <Route path="/view_school_branches" element={<ViewSchoolBranches />} />
             <Route path="/edit_school_branch/:id" element={<EditSchoolBranch />} />
+            <Route path="/view_student_categories" element={<ViewStudentCategories/>}/>
           </Switch>
         </Layout>
       </AuthContextProvider>
