@@ -41,7 +41,7 @@ export const SidebarData = [
     {
         title: "ALL BOOKS IN LIBRARY",
         icon: <LocalLibraryIcon />,
-        link: "/#"
+        link: "/manage_books"
     },
     {
         title: "ADD NEW BOOK",
