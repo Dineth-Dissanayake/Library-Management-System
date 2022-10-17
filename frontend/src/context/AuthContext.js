@@ -29,7 +29,7 @@ export const AuthContextProvider = ({ children }) => {
       const result = await res.json();
       if (!result.error) {
         setUser(result);
-        // navigate("/add_book", {replace: true});
+        navigate("/", {replace: true});
       }
     } catch (err) {
       console.log(err);
