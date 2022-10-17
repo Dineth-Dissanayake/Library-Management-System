@@ -81,7 +81,7 @@ class ViewAllBooks extends Component {
                             </input>
                         </div>
                         <p>
-                            Your Total Contacts: <strong>{this.state.books.length}</strong>
+                            Total Books: <strong>{this.state.books.length}</strong>
                         </p>
                     </form>
                     <br></br>
@@ -103,7 +103,7 @@ class ViewAllBooks extends Component {
                                 <tr key={index}>
                                     <td >{index+1}</td>
                                     <td>
-                                        <a href={'/book/'+books._id} style={{ textDecoration: 'none' }}>
+                                        <a href={'/book_details/'+books._id} style={{ textDecoration: 'none' }}>
                                         {books.bookId}
                                         </a>
                                     </td>
@@ -112,26 +112,17 @@ class ViewAllBooks extends Component {
                                     <td>{books.bCategory}</td>
                                     <td>{books.count}</td>
                                     <td>
-                                        {/* <a className="btn btn-warning" href={'/edit/'+books._id}>
-                                            <i className="fas fa-edit"></i>&nbsp;Edit
-                                        </a>
-                                        &nbsp;
-                                        <a className="btn btn-danger" href="/#" onClick={() => this.onDelete(books._id)} >
-                                            <i className="far fa-trash-alt"></i>&nbsp;Delete
-                                        </a> */}
-
                                         <Stack direction="row" spacing={2}>
                                             <IconButton aria-label="delete" color="error" onClick={() => this.onDelete(books._id)}>
                                                 <DeleteIcon />
                                             </IconButton>
-                                            <Link to={'/edit/'+books._id}>
+                                            <Link to={'/edit_book/'+books._id}>
                                                 <IconButton aria-label="edit" color='secondary'>
                                                     <EditIcon />
                                                 </IconButton>
                                             </Link>
                                         </Stack>
                                     </td>
-                                    {/* <Link to="/" className="navbar-brand">{title}</Link> */}
                                 </tr> 
                             ))}
                         </tbody>
