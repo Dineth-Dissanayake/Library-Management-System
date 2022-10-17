@@ -12,6 +12,8 @@ import AddCategory from "./pages/AddCategory";
 import ViewAllBooks from "./pages/ViewAllBooks";
 import EditBook from "./pages/EditBook";
 import BookDetails from "./pages/BookDetails";
+import IssueBook from "./pages/Issuebook";
+import ReturnBook from "./pages/Returnbook"
 
 const App = () => {
   return (
@@ -27,6 +29,8 @@ const App = () => {
             <Route path="/manage_books" element={<ViewAllBooks />} />
             <Route path="/edit_book/:id" element={<EditBook />} />
             <Route path="/book_details/:id" element={<BookDetails />} />
+            <Route path="/issuebook" element={<IssueBook />} />
+            <Route path="/returnbook" element={<ReturnBook />} />
           </Switch>
         </Layout>
       </AuthContextProvider>

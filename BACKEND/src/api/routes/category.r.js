@@ -19,7 +19,7 @@ router.post('/category/add', (req,res)=>{
     });
 });
 
-//GET Cagegory List
+//GET Category List
 router.get('/category', (req,res) => {
     Category.find().exec((err,Category) => {
         if(err){
