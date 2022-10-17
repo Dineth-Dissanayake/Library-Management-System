@@ -43,7 +43,7 @@ const BookDetails = () => {
                 <h3>FULL BOOK DETAILS OF : {credentials.bookId}</h3>
                 <br></br><hr></hr><br></br>
 
-                <dl class="row">
+                <dl class="row" style ={{width: 1200}}>
                     <dt className="col-sm-3">BOOK ID :</dt>
                     <dd className="col-sm-9">{credentials.bookId}</dd>
 
