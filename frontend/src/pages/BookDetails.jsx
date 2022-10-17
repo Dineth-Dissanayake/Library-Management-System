@@ -40,8 +40,7 @@ const BookDetails = () => {
         <>
             <Sidebar />
             <div className='container'>
-                <br></br>
-                <h4>FULL BOOK DETAILS OF : {credentials.bookId}</h4>
+                <h3>FULL BOOK DETAILS OF : {credentials.bookId}</h3>
                 <br></br><hr></hr><br></br>
 
                 <dl class="row">
