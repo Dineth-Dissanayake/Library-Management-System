@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import generatePDFIssueBooks from '../components/pdf/repotejenarater';
+import generatePDFIssueBooks from '../components/pdf/repotejenaraterIssueBook';
 
 import Sidebar from '../components/sidebar/Sidebar';
 import "./Main.css";
