@@ -27,6 +27,13 @@ export default class ViewSchoolBranches extends Component {
         });
     }
 
+    onDelete = (id) =>{
+        axios.delete('/schoolBranch/delete/' + id).then(res =>{
+            alert("Deleted Successfully!");
+            this.retrieveSchoolBranches();
+        })
+    }
+
 
   render() {
     return (
@@ -55,7 +62,7 @@ export default class ViewSchoolBranches extends Component {
                                     <i className="fas fa-edit"></i>&nbsp;Edit
                                     </a>
                                     &nbsp;
-                                    <a className="btn btn-danger" href="#">
+                                    <a className="btn btn-danger" href="#" onClick={() => this.onDelete(schoolBranches._id)}>
                                     <i className="fa-solid fa-trash-can"></i>&nbsp;Delete
                                     </a>
                                 </td>

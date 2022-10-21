@@ -27,6 +27,13 @@ export default class ViewStudentCategories extends Component {
         });
     }
 
+    onDelete = (id) =>{
+        axios.delete('/studentCategory/delete/' +id).then(res =>{
+            alert("Deleted Successfully!");
+            this.retrieveStudentCategories();
+        })
+    }
+
     render() {
         return(
             <div>
@@ -52,11 +59,11 @@ export default class ViewStudentCategories extends Component {
                                     <td>{studentCategories.categoryName}</td>
                                     <td>{studentCategories.maxAllowed}</td>
                                     <td>
-                                        <a className="btn btn-warning" href="">
+                                        <a className="btn btn-warning" href={`/edit_student_category/${studentCategories._id}`}>
                                         <i className="fas fa-edit"></i>&nbsp;Edit
                                         </a>
                                         &nbsp;
-                                        <a className="btn btn-danger" href="#">
+                                        <a className="btn btn-danger" href="#" onClick={() => this.onDelete(studentCategories._id)}>
                                         <i className="fa-solid fa-trash-can"></i>&nbsp;Delete
                                         </a>
                                     </td>

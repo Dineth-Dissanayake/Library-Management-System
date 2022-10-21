@@ -14,6 +14,7 @@ import AddStudentCategory from "./pages/AddStudentCategory";
 import ViewSchoolBranches from "./pages/ViewSchoolBranches";
 import EditSchoolBranch from "./pages/EditSchoolBranch";
 import ViewStudentCategories from "./pages/ViewStudentCategories";
+import EditStudentCategory from "./pages/EditStudentCategory";
 const App = () => {
   return (
     <ToastContextProvider>
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="/view_school_branches" element={<ViewSchoolBranches />} />
             <Route path="/edit_school_branch/:id" element={<EditSchoolBranch />} />
             <Route path="/view_student_categories" element={<ViewStudentCategories/>}/>
+            <Route path="/edit_student_category/:id" element={<EditStudentCategory />} />
           </Switch>
         </Layout>
       </AuthContextProvider>
