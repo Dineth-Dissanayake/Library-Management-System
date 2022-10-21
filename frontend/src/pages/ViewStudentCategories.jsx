@@ -28,7 +28,7 @@ export default class ViewStudentCategories extends Component {
     }
 
     onDelete = (id) =>{
-        axios.delete('/studentCategory/delete/' +id).then(res =>{
+        axios.delete('http://localhost:8080/studentCategory/delete/' +id).then(res =>{
             alert("Deleted Successfully!");
             this.retrieveStudentCategories();
         })

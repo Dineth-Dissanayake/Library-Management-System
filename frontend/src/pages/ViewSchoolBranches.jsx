@@ -28,7 +28,7 @@ export default class ViewSchoolBranches extends Component {
     }
 
     onDelete = (id) =>{
-        axios.delete('/schoolBranch/delete/' + id).then(res =>{
+        axios.delete('http://localhost:8080/schoolBranch/delete/' + id).then(res =>{
             alert("Deleted Successfully!");
             this.retrieveSchoolBranches();
         })
