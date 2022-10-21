@@ -10,7 +10,10 @@ import LibrarianHome from "./pages/LibrarianHome";
 import AddBook from "./pages/AddBook";
 import AddCategory from "./pages/AddCategory";
 import IssueBook from "./pages/Issuebook";
-import ReturnBook from "./pages/Returnbook"
+import ReturnBook from "./pages/Returnbook";
+import CategoryDetails from "./pages/CategoryDetails";
+import EditCategory from "./pages/EditCategory";
+import IssueBookDetails from "./pages/IssueBookDetails";
 
 const App = () => {
   return (
@@ -25,7 +28,9 @@ const App = () => {
             <Route path="/add_category" element={<AddCategory />} />
             <Route path="/issuebook" element={<IssueBook />} />
             <Route path="/returnbook" element={<ReturnBook />} />
-            
+            <Route path="/category_details" element={<CategoryDetails />} />
+            <Route path="/edit_category/:id" element={<EditCategory />} />
+            <Route path="/issued_books_details" element={<IssueBookDetails />} />
           </Switch>
         </Layout>
       </AuthContextProvider>

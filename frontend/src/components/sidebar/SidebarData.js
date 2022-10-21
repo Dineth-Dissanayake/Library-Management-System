@@ -50,7 +50,7 @@ export const SidebarData = [
     {
         title: "ALL BOOK CATEGORIES",
         icon: <DensitySmallIcon />,
-        link: "/#"
+        link: "/category_details"
     },
     {
         title: "ISSUE BOOK",
@@ -65,6 +65,6 @@ export const SidebarData = [
     {
         title: "ALL ISSUED BOOKS",
         icon: <StyleIcon />,
-        link: "/#"
+        link: "/issued_books_details"
     }
 ] 

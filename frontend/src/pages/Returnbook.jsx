@@ -64,7 +64,7 @@ class ReturnBook extends Component {
                             <input 
                                 type="text" 
                                 className="form-control" 
-                                placeholder="Default input" 
+                                placeholder="Input BookID" 
                                 name='bookId'
                                 value={this.state.bookId}
                                 onChange={this.handleInputChange}
@@ -76,7 +76,7 @@ class ReturnBook extends Component {
                             <input 
                                 type="text" 
                                 className="form-control" 
-                                placeholder="Default input" 
+                                placeholder="Input Date" 
                                 name='date'
                                 value={this.state.date}
                                 onChange={this.handleInputChange}

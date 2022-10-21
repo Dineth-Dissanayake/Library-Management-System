@@ -67,7 +67,7 @@ class IssueBook extends Component {
                             <input 
                                 type="text" 
                                 className="form-control" 
-                                placeholder="Default input" 
+                                placeholder="Input StudentID" 
                                 name='studentId'
                                 value={this.state.studentId}
                                 onChange={this.handleInputChange}
@@ -79,10 +79,11 @@ class IssueBook extends Component {
                             <input 
                                 type="text" 
                                 className="form-control" 
-                                placeholder="Default input" 
+                                placeholder="Input BookID" 
                                 name='bookId'
                                 value={this.state.bookId}
                                 onChange={this.handleInputChange}
+                               
                             />
                         </div>
 
@@ -91,7 +92,7 @@ class IssueBook extends Component {
                             <input 
                                 type="text" 
                                 className="form-control" 
-                                placeholder="Default input" 
+                                placeholder="Inpute Date" 
                                 name='date'
                                 value={this.state.date}
                                 onChange={this.handleInputChange}
