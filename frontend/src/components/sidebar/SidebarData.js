@@ -1,9 +1,7 @@
 import React from "react";
 
 import HomeIcon from '@mui/icons-material/Home';
-import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
-import HowToRegIcon from '@mui/icons-material/HowToReg';
 import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
@@ -19,24 +17,14 @@ export const SidebarData = [
         link: "/dashboard"
     },
     {
-        title: "ALL WAITING STUDENTS",
-        icon: <HourglassBottomIcon />,
-        link: "/#"
-    },
-    {
         title: "ALL APPROVED STUDENTS",
         icon: <CheckBoxIcon />,
-        link: "/#"
+        link: "/all_students"
     },
     {
         title: "ADD NEW STUDENTS",
         icon: <AddIcon />,
-        link: "/#"
-    },
-    {
-        title: "REGISTRATION SETTINGS",
-        icon: <HowToRegIcon />,
-        link: "/#"
+        link: "/add_student"
     },
     {
         title: "ALL BOOKS IN LIBRARY",
@@ -56,7 +44,7 @@ export const SidebarData = [
     {
         title: "ALL BOOK CATEGORIES",
         icon: <DensitySmallIcon />,
-        link: "/#"
+        link: "/category_details"
     },
     {
         title: "ISSUE BOOK",
@@ -71,6 +59,6 @@ export const SidebarData = [
     {
         title: "ALL ISSUED BOOKS",
         icon: <StyleIcon />,
-        link: "/#"
+        link: "/issued_books_details"
     }
 ] 

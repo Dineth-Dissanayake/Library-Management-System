@@ -13,7 +13,14 @@ import ViewAllBooks from "./pages/ViewAllBooks";
 import EditBook from "./pages/EditBook";
 import BookDetails from "./pages/BookDetails";
 import IssueBook from "./pages/Issuebook";
-import ReturnBook from "./pages/Returnbook"
+import ReturnBook from "./pages/Returnbook";
+import CategoryDetais from "./pages/CategoryDetails";
+import EditCategory from "./pages/EditCategory";
+import IssueBookDetails from "./pages/IssueBookDetails";
+import AddStudent from "./pages/AddStudent";
+import ViewAllStudents from "./pages/ViewAllStudents";
+import UpdateStudent from "./pages/UpdateStudent";
+import StudentDetail from "./pages/StudentDetail";
 
 const App = () => {
   return (
@@ -31,6 +38,13 @@ const App = () => {
             <Route path="/book_details/:id" element={<BookDetails />} />
             <Route path="/issuebook" element={<IssueBook />} />
             <Route path="/returnbook" element={<ReturnBook />} />
+            <Route path="/category_details" element={<CategoryDetais/>} />
+            <Route path="/edit_category/:id" element={<EditCategory />} />
+            <Route path="/issued_books_details" element={<IssueBookDetails />} />
+            <Route path="/add_student" element={<AddStudent />} />
+            <Route path="/all_students" element={<ViewAllStudents />} />
+            <Route path="/edit_student/:id" element={<UpdateStudent />} />
+            <Route path="/student_details/:id" element={<StudentDetail />} />
           </Switch>
         </Layout>
       </AuthContextProvider>

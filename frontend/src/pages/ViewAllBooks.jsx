@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import ToastContext from '../context/ToastContext';
 import Sidebar from '../components/sidebar/Sidebar';
 import "./Main.css";
-import generatePDFLibraryBooks from '../components/pdf/repotejenarater';
+import generatePDFLibraryBooks from '../components/pdf/repotejenaraterBook';
 
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';

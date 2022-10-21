@@ -23,13 +23,13 @@ class LibrarianHome extends Component {
                     </button>
 
                     <button style={{marginTop:75, marginLeft:100}}>
-                        <Link to="/#">
+                        <Link to="/issued_books_details">
                             <img src={IssueBook} alt="home_image" style ={{width:185, height:200}} />
                         </Link>
                     </button>
 
                     <button style={{marginTop:75, marginLeft:100}}>
-                        <Link to="/#">
+                        <Link to="/all_students">
                             <img src={FindStudent} alt="home_image" style ={{width:180, height:200}} />
                         </Link>
                     </button>
