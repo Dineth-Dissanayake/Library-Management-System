@@ -19,6 +19,9 @@ app.use(express.json({ limit: "20mb" }));
 const bookRoutes = require("./api/routes/book.r");
 app.use(bookRoutes);
 
+const studentRoutes = require("./api/routes/student.r");
+app.use(studentRoutes);
+
 const categoryRoutes = require("./api/routes/category.r");
 app.use(categoryRoutes);
 
