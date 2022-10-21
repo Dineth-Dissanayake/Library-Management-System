@@ -64,6 +64,17 @@ export default function EditBook(){
             count:count,
             description:description
         }
+        if(
+            !credentials.bookId ||
+            !credentials.title ||
+            !credentials.autherName ||
+            !credentials.bCategory ||
+            !credentials.count ||
+            !credentials.description
+            ) {
+            toast.error("Please enter all required fields!");
+            return;
+        }
         console.log(data);
         axios
         .put(`http://localhost:8080/book/update/`+id, data)

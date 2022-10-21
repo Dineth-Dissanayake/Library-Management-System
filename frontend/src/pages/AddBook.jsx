@@ -53,92 +53,92 @@ const AddBook = () => {
 
     return (
         <>
-                <Sidebar />
-                <div className='container'>
-                    <h3>ADD BOOK TO THE SYSTEM</h3>
+            <Sidebar />
+            <div className='container'>
+                <h3>ADD BOOK TO THE SYSTEM</h3>
 
-                    <form>
-                        <div className="col-md-6 mt-4">
-                            <label className="col-form-label" htmlFor="inputDefault">Book ID</label>
-                            <input 
-                                type="text" 
-                                className="form-control" 
-                                placeholder="Bxxx" 
-                                name='bookId'
-                                value={credentials.bookId}
-                                onChange={handleInputChange}
-                            />
-                        </div>
+                <form>
+                    <div className="col-md-6 mt-4">
+                        <label className="col-form-label" htmlFor="inputDefault">Book ID</label>
+                        <input 
+                            type="text" 
+                            className="form-control" 
+                            placeholder="Bxxx" 
+                            name='bookId'
+                            value={credentials.bookId}
+                            onChange={handleInputChange}
+                        />
+                    </div>
 
-                        <div className="col-md-6 mt-3">
-                            <label className="col-form-label" htmlFor="inputDefault">Title Of The Book</label>
-                            <input 
-                                type="text" 
-                                className="form-control" 
-                                placeholder="Book Title" 
-                                name='title'
-                                value={credentials.title}
-                                onChange={handleInputChange}
-                            />
-                        </div>
+                    <div className="col-md-6 mt-3">
+                        <label className="col-form-label" htmlFor="inputDefault">Title Of The Book</label>
+                        <input 
+                            type="text" 
+                            className="form-control" 
+                            placeholder="Book Title" 
+                            name='title'
+                            value={credentials.title}
+                            onChange={handleInputChange}
+                        />
+                    </div>
 
-                        <div className="col-md-6 mt-3">
-                            <label className="col-form-label" htmlFor="inputDefault">Author's Name</label>
-                            <input 
-                                type="text" 
-                                className="form-control" 
-                                placeholder="Author Name" 
-                                name='autherName' 
-                                value={credentials.autherName}
-                                onChange={handleInputChange}
-                            />
-                        </div>
+                    <div className="col-md-6 mt-3">
+                        <label className="col-form-label" htmlFor="inputDefault">Author's Name</label>
+                        <input 
+                            type="text" 
+                            className="form-control" 
+                            placeholder="Author Name" 
+                            name='autherName' 
+                            value={credentials.autherName}
+                            onChange={handleInputChange}
+                        />
+                    </div>
 
-                        <div className="col-md-6 mt-3">
-                            <label className="col-form-label" htmlFor="inputDefault">Book Category</label>
-                            <select 
-                                name="bCategory" 
-                                className="form-select"
-                                value={credentials.bCategory}
-                                onChange={handleInputChange} 
-                            >
-                                <option>Choose...</option>
-                                <option>Engineering</option>
-                                <option>Computing</option>
-                                <option>Business Management</option>
-                            </select>
-                        </div>
+                    <div className="col-md-6 mt-3">
+                        <label className="col-form-label" htmlFor="inputDefault">Book Category</label>
+                        <select 
+                            name="bCategory" 
+                            className="form-select"
+                            value={credentials.bCategory}
+                            onChange={handleInputChange} 
+                        >
+                            <option>Choose...</option>
+                            <option>Engineering</option>
+                            <option>Computing</option>
+                            <option>Business Management</option>
+                        </select>
+                    </div>
 
-                        <div className="col-md-6 mt-3">
-                            <label className="col-form-label" htmlFor="inputDefault">Book Count</label>
-                            <input 
-                                type="text" 
-                                className="form-control" 
-                                placeholder="XX" 
-                                name='count' 
-                                value={credentials.count}
-                                onChange={handleInputChange}
-                            />
-                        </div>
+                    <div className="col-md-6 mt-3">
+                        <label className="col-form-label" htmlFor="inputDefault">Book Count</label>
+                        <input 
+                            type="text" 
+                            className="form-control" 
+                            placeholder="XX" 
+                            name='count' 
+                            value={credentials.count}
+                            onChange={handleInputChange}
+                        />
+                    </div>
 
-                        <div className="col-md-6 mt-1">
-                            <label htmlFor="exampleTextarea" className="form-label mt-4">Description</label>
-                            <textarea 
-                                className="form-control"
-                                placeholder="Enter Book Description"  
-                                name='description'
-                                rows="3" 
-                                spellCheck="false"
-                                value={credentials.description}
-                                onChange={handleInputChange}
-                            >
-                            </textarea>
-                        </div>
+                    <div className="col-md-6 mt-1">
+                        <label htmlFor="exampleTextarea" className="form-label mt-4">Description</label>
+                        <textarea 
+                            className="form-control"
+                            placeholder="Enter Book Description"  
+                            name='description'
+                            rows="3" 
+                            spellCheck="false"
+                            value={credentials.description}
+                            onChange={handleInputChange}
+                        >
+                        </textarea>
+                    </div>
 
-                        <button type="button" className="btn btn-info mt-4" onClick={onSubmit}>ADD BOOK</button>
+                    <button type="button" className="btn btn-info mt-4" onClick={onSubmit}>ADD BOOK</button>
 
-                    </form>
-                </div>
+                </form>
+            </div>
         </>
     );
 };

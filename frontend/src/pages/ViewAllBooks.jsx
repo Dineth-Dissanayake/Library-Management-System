@@ -40,9 +40,9 @@ const ViewAllBooks = () => {
 
     const filterData = (books,searchKey) => {
         const result = books.filter((book) => 
-            book.bookId.toLowerCase().includes(searchKey)||
-            book.title.toLowerCase().includes(searchKey)||
-            book.autherName.toLowerCase().includes(searchKey)
+            book.bookId.toLowerCase().toUpperCase().includes(searchKey)||
+            book.title.toLowerCase().toUpperCase().includes(searchKey)||
+            book.autherName.toLowerCase().toUpperCase().includes(searchKey)
         )
         setCredentials({books:result})
     };
