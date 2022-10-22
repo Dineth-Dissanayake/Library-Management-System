@@ -1,13 +1,15 @@
-import React,{useEffect, useState} from "react";
+import React,{useEffect, useContext, useState} from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
+import ToastContext from '../context/ToastContext';
 import Sidebar from '../components/sidebar/Sidebar';
 import "./Main.css";
 
 
 export default function EditCategory(){
 
+    const {toast} = useContext(ToastContext);
     const navigate = useNavigate();
 
     const [credentials, setCredentials] = useState({
@@ -46,6 +48,13 @@ export default function EditCategory(){
         const data = {
             categoryId: categoryId,
             Category: Category
+        }
+        if(
+            !credentials.categoryId ||
+            !credentials.Category
+            ) {
+            toast.error("Please enter all required fields!");
+            return;
         }
         console.log(data);
         axios

@@ -30,6 +30,13 @@ class AddCategory extends Component {
             categoryId : categoryId,
             Category : Category
         }
+        if(
+            !this.state.categoryId ||
+            !this.state.Category
+            ) {
+            alert("Please enter all required fields!");
+            return;
+        }
         console.log(data);
 
         axios.post("http://localhost:8080/category/add",data).then((res) => {

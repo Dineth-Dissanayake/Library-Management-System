@@ -1,14 +1,15 @@
-import React,{useEffect, useState} from "react";
+import React,{useEffect, useContext, useState} from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
 import Sidebar from '../components/sidebar/Sidebar';
 import "./Main.css";
-
+import ToastContext from '../context/ToastContext';
 
 export default function UpdateStudent(){
 
     const navigate = useNavigate();
+    const {toast} = useContext(ToastContext);
 
     const [credentials, setCredentials] = useState({
         fullName: "",
@@ -71,7 +72,7 @@ export default function UpdateStudent(){
             !credentials.contactNumber||
             !credentials.address
             ) {
-            alert("Please enter all required fields!");
+            toast.error("Please enter all required fields!");
             return;
         }
         console.log(data);
@@ -144,6 +145,8 @@ export default function UpdateStudent(){
                     className="form-control"
                     placeholder="Enter NIC number here"
                     name='NIC'
+                    maxLength={12}
+                    minLength={12}
                     value={credentials.NIC}
                     onChange={handleInputChange} required />
                 </div>
@@ -192,6 +195,8 @@ export default function UpdateStudent(){
                     className="form-control"
                     placeholder="071 234 5678"
                     name='contactNumber'
+                    maxLength={10}
+                    minLength={10}
                     value={credentials.contactNumber}
                     onChange={handleInputChange} required />
                 </div>
