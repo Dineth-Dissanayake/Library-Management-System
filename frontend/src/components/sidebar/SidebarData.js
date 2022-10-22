@@ -9,6 +9,8 @@ import AssignmentReturnedIcon from '@mui/icons-material/AssignmentReturned';
 import StyleIcon from '@mui/icons-material/Style';
 import DensitySmallIcon from '@mui/icons-material/DensitySmall';
 import AddIcon from '@mui/icons-material/Add';
+import Group from "@mui/icons-material/Group";
+import HolidayVillageIcon from "@mui/icons-material/HolidayVillage";
 
 export const SidebarData = [
     {
@@ -60,5 +62,15 @@ export const SidebarData = [
         title: "ALL ISSUED BOOKS",
         icon: <StyleIcon />,
         link: "/issued_books_details"
-    }
+    },
+    {
+        title: "SCHOOL BRANCHES",
+        icon: <HolidayVillageIcon />,
+        link: "/view_school_branches"
+    },
+    {
+        title: "STUDENT CATEGORIES",
+        icon: <Group />,
+        link: "/view_student_categories"
+    },
 ] 

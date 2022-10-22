@@ -31,6 +31,11 @@ app.use(issuebookRoutes);
 const returnbookRoutes = require("./api/routes/returnbook.r");
 app.use(returnbookRoutes);
 
+const studentBranchRoutes = require("./api/routes/schoolBranch.r");
+app.use(studentBranchRoutes);
+
+const studentCategoryRoutes = require("./api/routes/studentCategory.r");
+app.use(studentCategoryRoutes);
 
 app.use("/api/", require("./api/routes/librarian.auth.r"));
 

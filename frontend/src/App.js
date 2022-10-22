@@ -21,6 +21,12 @@ import AddStudent from "./pages/AddStudent";
 import ViewAllStudents from "./pages/ViewAllStudents";
 import UpdateStudent from "./pages/UpdateStudent";
 import StudentDetail from "./pages/StudentDetail";
+import AddSchoolBranch from "./pages/AddSchoolBranch";
+import AddStudentCategory from "./pages/AddStudentCategory";
+import ViewSchoolBranches from "./pages/ViewSchoolBranches";
+import EditSchoolBranch from "./pages/EditSchoolBranch";
+import ViewStudentCategories from "./pages/ViewStudentCategories";
+import EditStudentCategory from "./pages/EditStudentCategory";
 
 const App = () => {
   return (
@@ -45,6 +51,12 @@ const App = () => {
             <Route path="/all_students" element={<ViewAllStudents />} />
             <Route path="/edit_student/:id" element={<UpdateStudent />} />
             <Route path="/student_details/:id" element={<StudentDetail />} />
+            <Route path="/add_school_branch" element={<AddSchoolBranch />} />
+            <Route path="/add_student_category" element={<AddStudentCategory />} />
+            <Route path="/view_school_branches" element={<ViewSchoolBranches />} />
+            <Route path="/edit_school_branch/:id" element={<EditSchoolBranch />} />
+            <Route path="/view_student_categories" element={<ViewStudentCategories/>}/>
+            <Route path="/edit_student_category/:id" element={<EditStudentCategory />} />
           </Switch>
         </Layout>
       </AuthContextProvider>
